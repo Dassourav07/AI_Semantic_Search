@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title> AI Semantic Search Engine Results</title>
+    <link rel="stylesheet" type="text/css" href="../static/Style.css">
+  </head>
+  <body>
+    <h1>Search Results for "{{ query }}"</h1>
+    <ol>
+      {% for result in results %}
+      <li><a href="{{ result[0] }}">{{ result[0] }}</a> ({{ result[1]|round(2) }})</li>
+      {% endfor %}
+    </ol>
+    <p><a href="/">Search again</a></p>
+  </body>
+</html>
